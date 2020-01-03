@@ -1,11 +1,11 @@
-import React, { Component } from "react";
+import React, { Component } from 'react';
 
 //Stateless functional component
 const NavBar = ({ totalCounters }) => {
   return (
-    <nav className='navbar navbar-light bg-light'>
+    <nav className='navbar navbar-dark bg-dark'>
       <a className='navbar-brand' href='#'>
-        Navbar{" "}
+        Navbar{' '}
         <span className='badge badge-pill badge-secondary'>
           {totalCounters}
         </span>

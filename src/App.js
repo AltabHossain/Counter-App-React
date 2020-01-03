@@ -1,7 +1,7 @@
-import React, { Component } from "react";
-import NavBar from "./components/navbar";
-import Counters from "./components/counters";
-import "./App.css";
+import React, { Component } from 'react';
+import NavBar from './components/navbar';
+import Counters from './components/counters';
+import classes from './App.module.css';
 
 class APP extends Component {
   state = {
@@ -14,11 +14,11 @@ class APP extends Component {
   };
   constructor() {
     super();
-    console.log("App - Constructor");
+    console.log('App - Constructor');
   }
 
   componentDidMount() {
-    console.log("App - Mounted");
+    console.log('App - Mounted');
   }
 
   handleIncrement = counter => {
@@ -42,13 +42,13 @@ class APP extends Component {
     console.log(this.state.counters);
   };
   render() {
-    console.log("App - Rendered");
+    console.log('App - Rendered');
     return (
-      <React.Fragment>
+      <div className={classes.App}>
         <NavBar
           totalCounters={this.state.counters.filter(c => c.value > 0).length}
         />
-        <main className='contaoner'>
+        <main className='container'>
           <Counters
             counters={this.state.counters}
             onReset={this.handleReset}
@@ -56,7 +56,7 @@ class APP extends Component {
             onDelete={this.handleDelete}
           />
         </main>
-      </React.Fragment>
+      </div>
     );
   }
 }
