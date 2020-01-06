@@ -11,9 +11,9 @@ class Counters extends Component {
           Reset Counters
         </button>
         {counters.map(counter => (
-          <div className={classes.Counter}>
+          <div className={classes.Counter} key={counter.id}>
             <Counter
-              key={counter.id}
+              // key={counter.id}
               onDelete={onDelete}
               onIncrement={onIncrement}
               counter={counter}

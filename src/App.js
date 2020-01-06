@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import NavBar from './components/navbar';
 import Counters from './components/counters';
 import classes from './App.module.css';
+import Footer from './components/footer';
 
 class APP extends Component {
   state = {
@@ -56,6 +57,7 @@ class APP extends Component {
             onDelete={this.handleDelete}
           />
         </main>
+        <Footer />
       </div>
     );
   }
